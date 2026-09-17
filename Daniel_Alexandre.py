@@ -50,7 +50,6 @@ for product in products:
           most_expensive_name = product["name"]
 print(most_expensive_name)
 seperater()
-seperater()
      
 
 # ==================================================
@@ -95,8 +94,6 @@ result = create_result(scores)
 print ("average ", calculate_average(scores),"result", result)
 
 seperater()
-seperater()
-     
 
 # ==================================================
 # TASK 3
@@ -158,8 +155,7 @@ total = calculate_order("Anna", *product_prices, **order_settings)
 
 print(total) 
 
-
-
+seperater()
 
 
 # ==================================================
@@ -201,3 +197,11 @@ players = [
 
 
 # Write your solution below:
+normalized_player_names = [player["name"].strip().capitalize()for player in players]
+print(normalized_player_names)
+seperater()
+
+player_score = [player for player in players if player["active"] and player["score"] >= 80]
+print(player_score)
+seperater()
+
