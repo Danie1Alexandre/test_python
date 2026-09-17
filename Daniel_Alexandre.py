@@ -205,3 +205,22 @@ player_score = [player for player in players if player["active"] and player["sco
 print(player_score)
 seperater()
 
+sorted_player_score = sorted(players, key=lambda player:player["score"], reverse= True)
+print(sorted_player_score)
+seperater()
+
+for index, player in enumerate(sorted_player_score, start=1):
+    new_n = player["name"].strip().capitalize()
+    print(index, new_n, player["score"] )
+
+seperater()
+
+player_name = [player["name"] for player in players]
+print(player_name)
+
+player_score_list = [player["score"] for player in players]
+print(player_score_list)
+
+for name, score in zip(player_name,player_score_list):
+     print(f"name {name} score {score}" )
+
